@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'it.unicam.cs.pa.ChessboardGame'
-include('app', 'list', 'utilities')
+include('app', 'utilities', 'api')
