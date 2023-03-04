@@ -1,7 +1,7 @@
-package it.unicam.cs.pa.ChessboardGame.Model;
+package it.unicam.cs.pa.ChessboardGame.Model.Board;
 
 /**
- * The CherckersPosition class represents a position on the checkers board.
+ * The CheckersPosition class represents a position on the checkers board.
  * It implements the {@link BoardPosition} interface, providing methods to access
  * the row and column of the position.
  */

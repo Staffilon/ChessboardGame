@@ -1,7 +1,7 @@
-package it.unicam.cs.ps.ChessboardGame;
+package it.unicam.cs.ps.ChessboardGame.Piece;
 
-import it.unicam.cs.pa.ChessboardGame.Model.BoardPosition;
-import it.unicam.cs.pa.ChessboardGame.Model.CheckersPosition;
+import it.unicam.cs.pa.ChessboardGame.Model.Board.BoardPosition;
+import it.unicam.cs.pa.ChessboardGame.Model.Board.CheckersPosition;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

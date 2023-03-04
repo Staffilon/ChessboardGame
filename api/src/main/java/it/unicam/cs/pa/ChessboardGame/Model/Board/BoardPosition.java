@@ -1,4 +1,4 @@
-package it.unicam.cs.pa.ChessboardGame.Model;
+package it.unicam.cs.pa.ChessboardGame.Model.Board;
 
 /**
  * The BoardPosition interface represents a position on a board,
