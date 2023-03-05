@@ -9,19 +9,22 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * The CheckersSquareTest class contains the unit tests for the {@link CheckersSquare} class.
+ */
 public class CheckersSquareTest {
     private CheckersSquare square;
     private CheckersPiece piece;
 
     @BeforeEach
     void setUp() {
-        square = new CheckersSquare(new CheckersPosition(1, 1), CheckersColor.WHITE);
+        square = new CheckersSquare(new CheckersPosition(1, 1, "B2"), CheckersColor.WHITE);
         piece = new CheckersPiece(CheckersColor.WHITE);
     }
 
     @Test
     void shouldReturnCorrectPosition() {
-        assertEquals(new CheckersPosition(1, 1), square.getPosition());
+        assertEquals(new CheckersPosition(1, 1, "B2"), square.getPosition());
     }
 
     @Test

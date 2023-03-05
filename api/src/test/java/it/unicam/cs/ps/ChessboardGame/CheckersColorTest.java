@@ -10,6 +10,9 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * The CheckersColorTest class contains the unit tests for the {@link CheckersColor} class.
+ */
 public class CheckersColorTest {
     @Test
     void shouldReturnCorrectNameAndSymbolForBlack() {

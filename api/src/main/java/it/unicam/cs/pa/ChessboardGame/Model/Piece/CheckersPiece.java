@@ -12,6 +12,7 @@ public class CheckersPiece implements Piece, Promotable {
     private CheckersPieceType pieceType;
     private boolean hasBeenPromoted;
 
+
     /**
      * Constructs a new checkers piece with the given color,
      * piece type, and promotion status.

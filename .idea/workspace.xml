@@ -4,31 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="732a860d-bcbb-4507-a2c8-3b5fc05c3e63" name="Changes" comment="Atomic commit">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/BoardDimensions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/CheckersBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/CheckersSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Color/CheckersColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Color/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Exceptions/PieceAlreadyPromotedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Piece/CheckersPiece.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Piece/CheckersPieceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Piece/Piece.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Piece/PieceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Piece/Promotable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Board/CheckersSquareTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/CheckersColorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Piece/CheckersPieceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Piece/CheckersPieceTypeTest.java" afterDir="false" />
+    <list default="true" id="732a860d-bcbb-4507-a2c8-3b5fc05c3e63" name="Changes" comment="Aggiunta di diverse interfacce e classi per i square, piece e board della nostra libreria e per il gioco di checkers (dama).">
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/CheckersBoardDimensions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Exceptions/InvalidBoardDimensionsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Exceptions/InvalidBoardPositionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Exceptions/InvalidPositionNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Exceptions/NullPieceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Board/CheckersBoardDimensionsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Board/CheckersBoardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Color.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/BoardPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/BoardPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/CheckersPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/CheckersPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Piece.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Square.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/CheckersPositionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Piece/CheckersPositionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/BoardDimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/BoardDimensions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/BoardPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/BoardPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/CheckersBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/CheckersBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/CheckersPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/CheckersPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Board/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Piece/CheckersPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/it/unicam/cs/pa/ChessboardGame/Model/Piece/CheckersPiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Board/CheckersSquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Board/CheckersSquareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/CheckersColorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/CheckersColorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Piece/CheckersPositionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/it/unicam/cs/ps/ChessboardGame/Board/CheckersPositionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +108,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save",
+    "settings.editor.selected.configurable": "preferences.editor",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -123,8 +117,8 @@
       <recent name="it.unicam.cs.pa.ChessboardGame.Model.Color" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CheckersSquareTest">
-    <configuration name="CheckersColorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CheckersBoardTest.shouldReturnCorrectOccupancy">
+    <configuration name="CheckersBoardTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +131,7 @@
           <list>
             <option value=":api:test" />
             <option value="--tests" />
-            <option value="&quot;it.unicam.cs.ps.ChessboardGame.CheckersColorTest&quot;" />
+            <option value="&quot;it.unicam.cs.ps.ChessboardGame.Board.CheckersBoardTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,7 +141,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CheckersPieceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckersBoardTest.shouldNotRemovePieceFromEmptySquare" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -160,7 +154,7 @@
           <list>
             <option value=":api:test" />
             <option value="--tests" />
-            <option value="&quot;it.unicam.cs.ps.ChessboardGame.Piece.CheckersPieceTest&quot;" />
+            <option value="&quot;it.unicam.cs.ps.ChessboardGame.Board.CheckersBoardTest.shouldNotRemovePieceFromEmptySquare&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -170,7 +164,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CheckersPieceTest.shouldSetColor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckersBoardTest.shouldReturnCorrectOccupancy" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -183,7 +177,7 @@
           <list>
             <option value=":api:test" />
             <option value="--tests" />
-            <option value="&quot;it.unicam.cs.ps.ChessboardGame.Piece.CheckersPieceTest.shouldSetColor&quot;" />
+            <option value="&quot;it.unicam.cs.ps.ChessboardGame.Board.CheckersBoardTest.shouldReturnCorrectOccupancy&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,7 +187,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CheckersPieceTest.shouldThrowExceptionIfPromotingToInvalidPiece" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckersBoardTest.shouldReturnNullIfSquareIsEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -206,7 +200,7 @@
           <list>
             <option value=":api:test" />
             <option value="--tests" />
-            <option value="&quot;it.unicam.cs.ps.ChessboardGame.Piece.CheckersPieceTest.shouldThrowExceptionIfPromotingToInvalidPiece&quot;" />
+            <option value="&quot;it.unicam.cs.ps.ChessboardGame.Board.CheckersBoardTest.shouldReturnNullIfSquareIsEmpty&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -216,7 +210,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CheckersSquareTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckersBoardTest.shouldReturnOccupiedSquares" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -229,7 +223,7 @@
           <list>
             <option value=":api:test" />
             <option value="--tests" />
-            <option value="&quot;it.unicam.cs.ps.ChessboardGame.Board.CheckersSquareTest&quot;" />
+            <option value="&quot;it.unicam.cs.ps.ChessboardGame.Board.CheckersBoardTest.shouldReturnOccupiedSquares&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -241,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CheckersSquareTest" />
-        <item itemvalue="Gradle.CheckersColorTest" />
-        <item itemvalue="Gradle.CheckersPieceTest" />
-        <item itemvalue="Gradle.CheckersPieceTest.shouldThrowExceptionIfPromotingToInvalidPiece" />
-        <item itemvalue="Gradle.CheckersPieceTest.shouldSetColor" />
+        <item itemvalue="Gradle.CheckersBoardTest.shouldReturnCorrectOccupancy" />
+        <item itemvalue="Gradle.CheckersBoardTest.shouldNotRemovePieceFromEmptySquare" />
+        <item itemvalue="Gradle.CheckersBoardTest.shouldReturnOccupiedSquares" />
+        <item itemvalue="Gradle.CheckersBoardTest.shouldReturnNullIfSquareIsEmpty" />
+        <item itemvalue="Gradle.CheckersBoardTest" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +261,9 @@
       <workItem from="1677856785718" duration="192000" />
       <workItem from="1677856999953" duration="11821000" />
       <workItem from="1677879189122" duration="857000" />
-      <workItem from="1677918504614" duration="20958000" />
+      <workItem from="1677918504614" duration="21221000" />
+      <workItem from="1677959796041" duration="161000" />
+      <workItem from="1678005108119" duration="28209000" />
     </task>
     <task id="LOCAL-00001" summary="Creata interfaccia BoardPosition per poter gestire le posizioni nella scacchiera e il conseguente record CherckersPosition per definire la posizione nella scacchiera di dama.">
       <created>1677879463858</created>
@@ -283,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677879750044</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Aggiunta di diverse interfacce e classi per i square, piece e board della nostra libreria e per il gioco di checkers (dama).">
+      <created>1677954469736</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677954469736</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +306,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creata interfaccia BoardPosition per poter gestire le posizioni nella scacchiera e il conseguente record CherckersPosition per definire la posizione nella scacchiera di dama." />
     <MESSAGE value="Atomic commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atomic commit" />
+    <MESSAGE value="Aggiunta di diverse interfacce e classi per i square, piece e board della nostra libreria e per il gioco di checkers (dama)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta di diverse interfacce e classi per i square, piece e board della nostra libreria e per il gioco di checkers (dama)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

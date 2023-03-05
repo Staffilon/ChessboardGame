@@ -4,6 +4,12 @@ import it.unicam.cs.pa.ChessboardGame.Model.Piece.Piece;
 
 import java.util.Iterator;
 
+/**
+ * @param <B>
+ * @param <P>
+ * @param <T>
+ */
+
 public interface Board<B extends BoardPosition, P extends Piece, T extends Square<B, P>> {
     /**
      * Returns the square at the specified position on the board.

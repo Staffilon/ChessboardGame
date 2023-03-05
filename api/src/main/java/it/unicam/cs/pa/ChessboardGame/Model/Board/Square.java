@@ -4,7 +4,7 @@ import it.unicam.cs.pa.ChessboardGame.Model.Color.Color;
 import it.unicam.cs.pa.ChessboardGame.Model.Piece.Piece;
 
 /**
- * The interface Square create an abstraction for the representation of the squares
+ * The interface Square creates an abstraction for the representation of the squares
  * in board games. It's parameter extends BoardPosition, in order to be able to handle
  * all sorts of boards.
  *

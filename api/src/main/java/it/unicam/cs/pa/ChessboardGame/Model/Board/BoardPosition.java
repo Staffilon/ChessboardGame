@@ -21,6 +21,13 @@ public interface BoardPosition {
     int column();
 
     /**
+     * Returns the name of the position on the board.
+     *
+     * @return the name of the position
+     */
+    String name();
+
+    /**
      * Returns a string representation of the position on the board
      *
      * @return the string representation of the position

@@ -10,12 +10,12 @@ public interface BoardDimensions {
      *
      * @return the number of rows in the board
      */
-    int getRows();
+    int rows();
 
     /**
      * Returns the number of columns in the board.
      *
      * @return the number of columns in the board
      */
-    int getColumns();
+    int columns();
 }
