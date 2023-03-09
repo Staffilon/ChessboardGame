@@ -12,7 +12,7 @@ public enum CheckersPieceType implements PieceType {
     /**
      * King checkers piece type.
      */
-    King("King", "K");
+    KING("King", "K");
 
     private final String name;
     private final String symbol;

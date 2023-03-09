@@ -18,13 +18,13 @@ public class CheckersSquareTest {
 
     @BeforeEach
     void setUp() {
-        square = new CheckersSquare(new CheckersPosition(1, 1, "B2"), CheckersColor.WHITE);
+        square = new CheckersSquare(new CheckersPosition(1, 1), CheckersColor.WHITE);
         piece = new CheckersPiece(CheckersColor.WHITE);
     }
 
     @Test
     void shouldReturnCorrectPosition() {
-        assertEquals(new CheckersPosition(1, 1, "B2"), square.getPosition());
+        assertEquals(new CheckersPosition(1, 1), square.getPosition());
     }
 
     @Test

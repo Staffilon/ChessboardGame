@@ -96,7 +96,7 @@ public class CheckersPiece implements Piece, Promotable {
             throw new PieceAlreadyPromotedException("checkers piece: " + this +
                     " is already promoted");
         }
-        this.pieceType = CheckersPieceType.King;
+        this.pieceType = CheckersPieceType.KING;
         this.hasBeenPromoted = true;
     }
 }

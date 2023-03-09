@@ -14,7 +14,18 @@ public class CheckersSquare implements Square<CheckersPosition, CheckersPiece> {
     /**
      * Instantiates a new Checkers square with the given position.
      *
+     * @param position the position of the square
+     */
+    public CheckersSquare(CheckersPosition position) {
+        this.position = position;
+        color = null;
+    }
+
+    /**
+     * Instantiates a new Checkers square with the given position and color.
+     *
      * @param position the checkers square position
+     * @param color    the color of the square
      */
     public CheckersSquare(CheckersPosition position, CheckersColor color) {
         this.position = position;
@@ -23,17 +34,18 @@ public class CheckersSquare implements Square<CheckersPosition, CheckersPiece> {
     }
 
     /**
-     * Instantiates a new Checkers square with the given position and piece.
+     * Instantiates a new Checkers square with the given position, color and piece.
      *
      * @param piece    the piece on the square
      * @param position the checkers square position
+     * @param color    the color of the square
      */
     public CheckersSquare(CheckersPiece piece, CheckersPosition position, CheckersColor color) {
         this.piece = piece;
         this.position = position;
         this.color = color;
     }
-    
+
     public CheckersColor getColor() {
         return color;
     }

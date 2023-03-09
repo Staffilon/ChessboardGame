@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,7 +28,7 @@ public class CheckersBoardTest {
         // Check black pieces are in the right position
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < board.getDimensions().columns(); col++) {
-                CheckersPosition position = new CheckersPosition(row, col, "A1");
+                CheckersPosition position = new CheckersPosition(row, col);
                 CheckersPiece piece = board.getPieceAt(position);
 
                 if (((position.row() + position.column()) % 2) == 1) {
@@ -42,7 +43,7 @@ public class CheckersBoardTest {
         // Check white pieces are in the right position
         for (int row = 5; row < board.getDimensions().rows(); row++) {
             for (int col = 0; col < board.getDimensions().columns(); col++) {
-                CheckersPosition position = new CheckersPosition(row, col, "A1");
+                CheckersPosition position = new CheckersPosition(row, col);
                 CheckersPiece piece = board.getPieceAt(position);
 
                 if (((position.row() + position.column()) % 2) == 1) {
@@ -57,13 +58,13 @@ public class CheckersBoardTest {
 
     @Test
     void shouldReturnNullIfSquareIsEmpty() {
-        CheckersPosition emptyPosition = new CheckersPosition(3, 3, "D5");
+        CheckersPosition emptyPosition = new CheckersPosition(3, 3);
         assertNull(board.getPieceAt(emptyPosition));
     }
 
     @Test
     void shouldReturnCorrectSquareAndPieceAtPosition() {
-        CheckersPosition position = new CheckersPosition(0, 0, "A8");
+        CheckersPosition position = new CheckersPosition(0, 0);
         CheckersSquare square = board.getSquareAt(position);
         CheckersPiece piece = board.getPieceAt(position);
 
@@ -83,7 +84,7 @@ public class CheckersBoardTest {
 
     @Test
     void shouldSetAndRemovePieceAtPosition() {
-        CheckersPosition position = new CheckersPosition(1, 1, "B7");
+        CheckersPosition position = new CheckersPosition(1, 1);
         CheckersPiece piece = new CheckersPiece(CheckersColor.BLACK);
 
         assertFalse(board.getSquareAt(position).isOccupied());
@@ -98,13 +99,13 @@ public class CheckersBoardTest {
 
     @Test
     void shouldThrowExceptionWhenSettingNullPiece() {
-        CheckersPosition position = new CheckersPosition(0, 0, "A8");
+        CheckersPosition position = new CheckersPosition(0, 0);
         assertThrows(NullPieceException.class, () -> board.setPieceAt(null, position));
     }
 
     @Test
     void shouldNotRemovePieceFromEmptySquare() {
-        CheckersPosition position = new CheckersPosition(1, 1, "B7");
+        CheckersPosition position = new CheckersPosition(1, 1);
 
         assertFalse(board.getSquareAt(position).isOccupied());
         assertThrows(NullPieceException.class, () -> board.removePieceAt(position));
@@ -112,14 +113,14 @@ public class CheckersBoardTest {
 
     @Test
     void shouldThrowExceptionWhenRemovingNullPiece() {
-        CheckersPosition position = new CheckersPosition(0, 0, "A8");
+        CheckersPosition position = new CheckersPosition(0, 0);
         assertThrows(NullPieceException.class, () -> board.removePieceAt(position));
     }
 
     @Test
     void shouldReturnCorrectOccupancy() {
-        CheckersPosition occupiedPosition = new CheckersPosition(1, 1, "B7");
-        CheckersPosition emptyPosition = new CheckersPosition(3, 3, "D5");
+        CheckersPosition occupiedPosition = new CheckersPosition(1, 1);
+        CheckersPosition emptyPosition = new CheckersPosition(3, 3);
 
         board.setPieceAt(new CheckersPiece(CheckersColor.BLACK), occupiedPosition);
         assertTrue(board.isOccupiedAt(occupiedPosition));
@@ -135,24 +136,12 @@ public class CheckersBoardTest {
 
     @Test
     void shouldReturnOccupiedSquares() {
-        CheckersPosition position = new CheckersPosition(1, 1, "B7");
+        CheckersPosition position = new CheckersPosition(1, 1);
         CheckersPiece piece = new CheckersPiece(CheckersColor.BLACK);
 
         assertFalse(board.isOccupiedAt(position));
         assertDoesNotThrow(() -> board.setPieceAt(piece, position));
         assertTrue(board.isOccupiedAt(position));
-    }
-
-    @Test
-    void shouldIterateOverAllSquares() {
-        int count = 0;
-        Iterator<CheckersSquare> iterator = board.iterator();
-        while (iterator.hasNext()) {
-            CheckersSquare square = iterator.next();
-            assertNotNull(square);
-            count++;
-        }
-        assertEquals(64, count);
     }
 
     @Test
@@ -164,5 +153,19 @@ public class CheckersBoardTest {
             count++;
         }
         assertEquals(24, count);
+    }
+
+    @Test
+    void shouldReturnListWithThreeAdjacentSquares() {
+        CheckersSquare square = board.getSquareAt(new CheckersPosition(0, 0));
+        List<CheckersSquare> adjacentSquares = board.getAccessibleSquares(square);
+        assertEquals(2, adjacentSquares.size());
+    }
+
+    @Test
+    void shouldReturnListWithEightAdjacentSquares() {
+        CheckersSquare square = board.getSquareAt(new CheckersPosition(3, 3));
+        List<CheckersSquare> adjacentSquares = board.getAccessibleSquares(square);
+        assertEquals(8, adjacentSquares.size());
     }
 }

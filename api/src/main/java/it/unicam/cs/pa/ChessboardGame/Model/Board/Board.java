@@ -3,6 +3,7 @@ package it.unicam.cs.pa.ChessboardGame.Model.Board;
 import it.unicam.cs.pa.ChessboardGame.Model.Piece.Piece;
 
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * @param <B>
@@ -64,11 +65,12 @@ public interface Board<B extends BoardPosition, P extends Piece, T extends Squar
     BoardDimensions getDimensions();
 
     /**
-     * Returns an iterator over the squares on the board.
+     * Returns a list with all the adjacent squares to the one given as argument
      *
-     * @return an iterator over the squares on the board
+     * @param square the square whose adjacent squares we want to get
+     * @return the adjacent squares to the one given as argument
      */
-    Iterator<T> iterator();
+    List<T> getAccessibleSquares(T square);
 
     /**
      * Returns an iterator over the pieces on the board.

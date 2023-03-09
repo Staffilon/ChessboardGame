@@ -25,7 +25,7 @@ public interface BoardPosition {
      *
      * @return the name of the position
      */
-    String name();
+    String getName();
 
     /**
      * Returns a string representation of the position on the board

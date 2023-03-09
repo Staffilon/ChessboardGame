@@ -7,6 +7,10 @@ import it.unicam.cs.pa.ChessboardGame.Model.Piece.CheckersPiece;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static java.util.Arrays.stream;
 
 /**
  * The CheckersBoard class, which manages the elements on the board, such as squares and pieces.
@@ -53,7 +57,7 @@ public class CheckersBoard implements Board<CheckersPosition, CheckersPiece, Che
 
     /**
      * Creates a starting piece of the board, based on the given position. If the position
-     * is not corresponding to a square on which a piece should be, it will return null
+     * is not corresponding to a square on which a piece should be, it will return null.
      *
      * @param position the position on which the piece might be created
      * @return the piece of the board if the position was the right one, null otherwise
@@ -80,8 +84,7 @@ public class CheckersBoard implements Board<CheckersPosition, CheckersPiece, Che
      * @return the newly created position
      */
     private CheckersPosition createSquarePosition(int row, int column) {
-        String name = Character.toString('A' + column) + (boardDimensions.rows() - row);
-        return new CheckersPosition(row, column, name);
+        return new CheckersPosition(row, column);
     }
 
     /**
@@ -170,18 +173,26 @@ public class CheckersBoard implements Board<CheckersPosition, CheckersPiece, Che
     }
 
     @Override
-    public Iterator<CheckersSquare> iterator() {
-        return Arrays.stream(squares)
-                .flatMap(Arrays::stream)
-                .iterator();
-    }
-
-    @Override
     public Iterator<CheckersPiece> pieceIterator() {
-        return Arrays.stream(squares)
+        return stream(squares)
                 .flatMap(Arrays::stream)
                 .filter(CheckersSquare::isOccupied)
                 .map(CheckersSquare::getPiece)
                 .iterator();
+    }
+
+    @Override
+    public List<CheckersSquare> getAccessibleSquares(CheckersSquare square) {
+        CheckersPosition position = square.getPosition();
+
+        return Arrays.stream(squares).flatMap(Arrays::stream)
+                .filter(adjSquare -> {
+                    CheckersPosition adjPos = adjSquare.getPosition();
+                    return (Math.abs(position.row() - adjPos.row()) == 1 &&
+                            Math.abs(position.column() - adjPos.column()) == 1) ||
+                            (Math.abs(position.row() - adjPos.row()) == 2 &&
+                                    Math.abs(position.column() - adjPos.column()) == 2);
+                })
+                .collect(Collectors.toList());
     }
 }

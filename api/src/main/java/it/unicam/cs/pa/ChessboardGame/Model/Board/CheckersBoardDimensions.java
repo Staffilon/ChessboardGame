@@ -8,8 +8,8 @@ public record CheckersBoardDimensions(int columns, int rows) implements BoardDim
     }
 
     private void validateDimensions(int columns, int rows) {
-        if (columns <= 0 || rows <= 0) {
-            throw new InvalidBoardDimensionsException("Board dimensions must be positive!");
+        if (columns <= 0 || rows <= 0 || columns > 8 || rows > 8) {
+            throw new InvalidBoardDimensionsException("Board dimensions must be within bounds!");
         }
     }
 }

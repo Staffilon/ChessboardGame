@@ -9,12 +9,12 @@ public class CheckersPieceTypeTest {
     @Test
     void shouldReturnName() {
         assertEquals("Man", CheckersPieceType.MAN.getName());
-        assertEquals("King", CheckersPieceType.King.getName());
+        assertEquals("King", CheckersPieceType.KING.getName());
     }
 
     @Test
     void shouldReturnSymbol() {
         assertEquals("M", CheckersPieceType.MAN.getSymbol());
-        assertEquals("K", CheckersPieceType.King.getSymbol());
+        assertEquals("K", CheckersPieceType.KING.getSymbol());
     }
 }

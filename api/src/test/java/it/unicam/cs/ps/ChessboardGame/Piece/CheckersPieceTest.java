@@ -21,13 +21,13 @@ public class CheckersPieceTest {
     void shouldPromoteToKing() throws PieceAlreadyPromotedException {
         CheckersPiece manPiece = new CheckersPiece(CheckersColor.WHITE);
         manPiece.promote();
-        assertEquals(CheckersPieceType.King, manPiece.getPieceType());
+        assertEquals(CheckersPieceType.KING, manPiece.getPieceType());
         assertTrue(manPiece.hasBeenPromoted());
     }
 
     @Test
     void shouldThrowExceptionIfAlreadyPromoted() throws PieceAlreadyPromotedException {
-        CheckersPiece kingPiece = new CheckersPiece(CheckersColor.WHITE, CheckersPieceType.King, true);
+        CheckersPiece kingPiece = new CheckersPiece(CheckersColor.WHITE, CheckersPieceType.KING, true);
         PieceAlreadyPromotedException e = assertThrows(PieceAlreadyPromotedException.class, kingPiece::promote);
         assertEquals("checkers piece: " + kingPiece + " is already promoted", e.getMessage());
     }
